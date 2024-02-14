@@ -8,7 +8,7 @@ import { User, UserSchema } from './users/schemas/user.schema';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{name: User.name, schema:UserSchema}]),
+    MongooseModule.forRoot('mongodb://localhost/mini_chatting'),
     UsersModule
   ],
   controllers: [AppController, UsersController],
